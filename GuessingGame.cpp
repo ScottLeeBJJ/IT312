@@ -23,7 +23,9 @@ THE SOFTWARE.
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+
 using namespace std;
+
 int main() {
 
     //Seed the random number generator
