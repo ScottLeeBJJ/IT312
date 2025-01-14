@@ -1,3 +1,5 @@
+//Earnest Scott Lee, IT312, 1-14-25
+
 // DataTypes.cpp : The data types to declare each of the variables is missing.
 // Based on the value being stored in the variable and the comments beside it, 
 // fill in the data type at the beginning of each line.  Then compile and run 
