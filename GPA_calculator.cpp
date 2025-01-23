@@ -8,25 +8,47 @@
 #include <iostream>
 using namespace std;
 
+// Function to convert percentage grade to GPA
+double convertToGPA(int percentage) {
+    if (percentage >= 90) {
+        return 4.0;
+    } else if (percentage >= 80) {
+        return 3.0;
+    } else if (percentage >= 70) {
+        return 2.0;
+    } else if (percentage >= 60) {
+        return 1.0;
+    } else {
+        return 0.0;
+    }
+}
+
 int main() {
-    // Variables to store grades and GPA
-    double grade1, grade2, grade3, grade4, GPA;
+    // Variables for grades (percentages) and GPA
+    int grade1, grade2, grade3, grade4;
+    double GPA1, GPA2, GPA3, GPA4, GPA;
     bool summa_cum_laude = false;
     bool magna_cum_laude = false;
     bool cum_laude = false;
 
     // Input grades
-    cout << "Enter grade for course 1 (e.g., 4.0 for A): ";
+    cout << "Enter percentage for course 1 (0–100): ";
     cin >> grade1;
-    cout << "Enter grade for course 2 (e.g., 4.0 for A): ";
+    cout << "Enter percentage for course 2 (0–100): ";
     cin >> grade2;
-    cout << "Enter grade for course 3 (e.g., 4.0 for A): ";
+    cout << "Enter percentage for course 3 (0–100): ";
     cin >> grade3;
-    cout << "Enter grade for course 4 (e.g., 4.0 for A): ";
+    cout << "Enter percentage for course 4 (0–100): ";
     cin >> grade4;
 
+    // Convert percentages to GPA
+    GPA1 = convertToGPA(grade1);
+    GPA2 = convertToGPA(grade2);
+    GPA3 = convertToGPA(grade3);
+    GPA4 = convertToGPA(grade4);
+
     // Calculate GPA
-    GPA = (grade1 + grade2 + grade3 + grade4) / 4;
+    GPA = (GPA1 + GPA2 + GPA3 + GPA4) / 4;
 
     // Determine honors
     if (GPA >= 3.9) {
